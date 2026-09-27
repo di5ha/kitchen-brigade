@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kitchen Brigade — Autonomous Multi-Agent System</title>
+<meta name="description" content="The Kitchen Brigade: an autonomous multi-agent system that scouts, analyzes, and audits AI-engineering jobs — running 24/7 on $0 of cloud spend.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23e0992f'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' font-weight='bold' text-anchor='middle' fill='%23101014'%3EK%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="#top">
+    <span class="brand-mark">K</span>
+    <span class="brand-name">Kitchen Brigade</span>
+  </a>
+  <nav class="nav-links">
+    <a href="#crew">Crew</a>
+    <a href="#service">Service</a>
+    <a href="#brief">Latest brief</a>
+    <a href="#stack">Under the hood</a>
+  </nav>
+  <span class="status-pill" id="status-pill"><span class="dot"></span><span id="status-text">Checking…</span></span>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <p class="eyebrow">Pantheon · Autonomous multi-agent system</p>
+    <h1>The kitchen never<br>closes.</h1>
+    <p class="lede">Four agents run a job radar for AI-engineering roles — scouting postings, judging fit, verifying every link, and writing the brief. It runs itself, on schedule, on <strong>$0 of cloud spend</strong>.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#crew">Meet the crew</a>
+      <a class="btn btn-ghost" href="#brief">Read the latest brief</a>
+    </div>
+    <dl class="stats">
+      <div><dt>Candidates scouted</dt><dd data-stat="candidates">43</dd></div>
+      <div><dt>Postings verified</dt><dd data-stat="verified">8</dd></div>
+      <div><dt>Service time</dt><dd>46 sec</dd></div>
+      <div><dt>Monthly cost</dt><dd class="accent">$0.00</dd></div>
+    </dl>
+  </section>
+
+  <!-- CREW -->
+  <section class="section" id="crew">
+    <p class="eyebrow">The crew</p>
+    <h2>Four stations, one pass.</h2>
+    <p class="section-sub">Every service runs the same brigade. Each agent owns a station and hands off to the next — with audits at every step.</p>
+    <div class="cards">
+      <article class="card">
+        <p class="card-role">Orchestrator · front door</p>
+        <h3>Head Chef</h3>
+        <p>Runs the pass. Takes requests, routes work to the right station, and keeps the whole service on schedule. The one you talk to.</p>
+        <p class="card-foot">OpenClaw gateway · always on</p>
+      </article>
+      <article class="card">
+        <p class="card-role">Scout · sourcing</p>
+        <h3>Forager</h3>
+        <p>Works the market every Monday, Wednesday, and Friday. Pulls candidates from job APIs, then judges each one for fit — no flaky browsing, just reliable collection plus LLM judgment.</p>
+        <p class="card-foot">RemoteOK + HN “Who’s Hiring”</p>
+      </article>
+      <article class="card">
+        <p class="card-role">Analyst · writing</p>
+        <h3>Line Cook</h3>
+        <p>Turns verified postings into the brief: fit notes, honest caveats, and a skill-gap table with concrete next steps. Written for a data analyst becoming an AI engineer.</p>
+        <p class="card-foot">Briefs filed after every service</p>
+      </article>
+      <article class="card">
+        <p class="card-role">Auditor · quality</p>
+        <h3>Expediter</h3>
+        <p>Nothing leaves the kitchen unverified. Every link is fetched live — HTTP 200 or it doesn’t ship. Dedupes against everything ever seen, enforces the schema, retries on failure.</p>
+        <p class="card-foot">8 / 8 links verified last service</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- SERVICE -->
+  <section class="section" id="service">
+    <p class="eyebrow">How a service runs</p>
+    <h2>From market to table in under a minute.</h2>
+    <p class="section-sub">Fully scheduled. No human in the loop until the brief lands in chat.</p>
+    <ol class="timeline">
+      <li>
+        <span class="t-time">08:00</span>
+        <div><h4>Forager sources</h4><p>Deterministic pull from the RemoteOK API and the Hacker News “Who is hiring?” thread. Regex prefilter for AI/agent roles.</p></div>
+      </li>
+      <li>
+        <span class="t-time">08:00</span>
+        <div><h4>Forager judges</h4><p>An LLM scores each candidate for fit against the career goal — with JSON repair and retry when it returns prose instead of data.</p></div>
+      </li>
+      <li>
+        <span class="t-time">08:01</span>
+        <div><h4>Expediter verifies</h4><p>Every surviving URL is fetched live. Dead links are rejected, duplicates against the seen-log are dropped.</p></div>
+      </li>
+      <li>
+        <span class="t-time">08:01</span>
+        <div><h4>Line Cook writes</h4><p>Fit notes, caveats, a skill-gap table, and “also worth a look.” The brief is filed and archived.</p></div>
+      </li>
+      <li>
+        <span class="t-time">08:08</span>
+        <div><h4>Brief delivered</h4><p>The new brief lands in chat — automatically, three mornings a week. Failures page the owner; there’s a one-command kill switch.</p></div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- BRIEF -->
+  <section class="section" id="brief">
+    <p class="eyebrow">Tonight’s special</p>
+    <h2>The latest brief <span class="brief-date" id="brief-date"></span></h2>
+    <p class="section-sub">Served fresh from the last run. This is the real output — unedited.</p>
+    <article class="brief-card">
+      <div class="brief-body" id="brief-body">
+        <p class="loading">Plating the latest brief…</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- STACK -->
+  <section class="section" id="stack">
+    <p class="eyebrow">Under the hood</p>
+    <h2>Fine dining on a $0 budget.</h2>
+    <p class="section-sub">Every layer of the stack is free-tier or open source. The constraint was absolute: never incur any charges.</p>
+    <div class="stack-grid">
+      <table class="stack-table">
+        <thead><tr><th>Layer</th><th>What runs there</th><th class="num">Cost</th></tr></thead>
+        <tbody>
+          <tr><td>Compute</td><td>Oracle Cloud Always Free — 2 OCPUs, 12&nbsp;GB RAM, ARM</td><td class="num">$0.00</td></tr>
+          <tr><td>OS</td><td>Ubuntu 24.04 LTS Minimal</td><td class="num">$0.00</td></tr>
+          <tr><td>Orchestration</td><td>OpenClaw + Hermes gateways as systemd services</td><td class="num">$0.00</td></tr>
+          <tr><td>Model</td><td>Ollama Cloud · gpt-oss:120b (free tier)</td><td class="num">$0.00</td></tr>
+          <tr><td>Sourcing</td><td>RemoteOK + Hacker News public APIs</td><td class="num">$0.00</td></tr>
+          <tr><td>Serving</td><td>nginx on the same box you’re reading this from</td><td class="num">$0.00</td></tr>
+          <tr class="total"><td>Total</td><td>per month, every month</td><td class="num">$0.00</td></tr>
+        </tbody>
+      </table>
+      <div class="ops">
+        <h4>Operations</h4>
+        <ul>
+          <li><strong>Schedule</strong> — Mon / Wed / Fri, 08:00 America/Chicago</li>
+          <li><strong>Kill switch</strong> — <code>~/pantheon/STOP.sh</code> halts schedules and active runs; tested end-to-end</li>
+          <li><strong>Retries</strong> — empty-selection recall, JSON repair, per-URL retry with dead-letter queue</li>
+          <li><strong>Audit trail</strong> — every run archives candidates, brief, audit report, and logs</li>
+        </ul>
+        <h4>Live status</h4>
+        <dl class="live" id="live-status">
+          <div><dt>Head Chef gateway</dt><dd id="live-openclaw">…</dd></div>
+          <div><dt>Hermes gateway</dt><dd id="live-hermes">…</dd></div>
+          <div><dt>Last service</dt><dd id="live-last">…</dd></div>
+          <div><dt>Next service</dt><dd id="live-next">…</dd></div>
+          <div><dt>Dead-letter queue</dt><dd id="live-dlq">…</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p><strong>Kitchen Brigade</strong> — a Pantheon system. Built by Disha, data analyst → AI engineer.</p>
+  <p class="muted">This site is served from the same $0 VPS it describes. Cost of everything on this page: $0.00.</p>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>
